@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+dotfiles=("bashrc" "gitconfig")
+
+for dotfile in "${dotfiles[@]}"
+do
+	if [ -e ~/.$dotfile ]
+	then
+		echo ".$dotfile already created."
+	else
+		echo "Creating .$dotfile..."
+		ln -s ~/dotfiles/$dotfile ~/.$dotfile
+		
+	fi
+done
