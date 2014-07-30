@@ -1,5 +1,7 @@
 # .bash_git
 
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+
 #  Customize BASH PS1 prompt to show current GIT repository and branch.
 #  by Mike Stewart - http://MediaDoneRight.com
 
