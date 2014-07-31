@@ -1,11 +1,45 @@
 [user]
-	name = Łukasz Lechowicz
 	email = llechowicz@gmail.com
+	name = Łukasz Lechowicz
 
 [alias]
-	co = checkout
- 	ci = commit
- 	st = status
- 	br = branch
- 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	ch = checkout
+	co = commit
+	st = status
+        sl = stash list
+        sp = stash pop
+	switch = !legit switch \"$@\"
+	branches = !legit branches
+	sprout = !legit sprout \"$@\"
+	unpublish = !legit unpublish \"$@\"
+	harvest = !legit harvest \"$@\"
+	sync = !legit sync \"$@\"
+	publish = !legit publish \"$@\"
+	graft = !legit graft \"$@\"
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+[color "branch"]
+       current = yellow reverse
+       local = yellow 
+       remote = green
+[color "diff"]
+       meta = yellow bold
+       frag = magenta bold
+       old = red bold
+       new = green bold
+[color "status"]
+       added = yellow
+       changed = green
+       untracked = cyan
 
+[merge]
+       tool = mymeld
+
+[mergetool "mymeld"]
+       cms = $HOME/bin/gitmerge $BASE $LOCAL $REMOTE $MERGED
+
+[rerere]
+	enabled = 1
