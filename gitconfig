@@ -6,7 +6,8 @@
         lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
         ch = checkout
         co = commit
-        po = pull origin
+        pl = pull origin
+        ph = push origin
         st = status
         sl = stash list
         sp = stash pop
