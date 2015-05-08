@@ -46,3 +46,5 @@ alias getestall="./manage.py test --settings=conf.test_all"
 alias getest="./manage.py test --settings=conf.test"
 export PATH=$PATH:~/.local/bin/
 alias goto=". goto"
+
+PYTHONDONTWRITEBYTECODE=1
