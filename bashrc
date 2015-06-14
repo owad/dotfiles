@@ -32,3 +32,6 @@ export NODE_PATH=$HOME/local/lib/node_modules
 
 alias getestall="./manage.py test --settings=conf.test_all"
 alias getest="./manage.py test --settings=conf.test"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
